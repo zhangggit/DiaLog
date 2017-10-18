@@ -27,4 +27,25 @@ public class DiaLogUtils {
                     }
                 }).show();
     }
+
+    public static void showIconDiaLog(final Context context, String title, String message) {
+        new AlertDialog.Builder(context)
+                .setTitle(title)
+                .setIcon(R.mipmap.a2)
+                .setMessage(message)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(context, "点击了确定...", Toast.LENGTH_SHORT).show();
+                    }
+                }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(context, "点击了取消...", Toast.LENGTH_SHORT).show();
+            }
+        }).show();
+    }
+
+
 }
+
